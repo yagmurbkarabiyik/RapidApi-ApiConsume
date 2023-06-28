@@ -1,0 +1,46 @@
+﻿@model List<ResultBookingDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayouts.cshtml";
+    int count = 0;
+}
+       <div class="card-title">
+                    <h4>Rezervations</h4>
+        </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Date of Entry</th>
+                            <th>Date of Exit</th>
+                            <th>Status</th>
+                            <th>Confirm</th>
+                            <th>Cancel</th>
+                            <th>Hold On</th>
+                            <th>Update</th>
+                            <th>Details</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            <tr>
+                            <th>@count</th>
+                            <td>@item.Name</td>
+                            <td>@(((DateTime)item.CheckIn).ToString("dd-MMM-yyyy"))</td>
+                            <td>@(((DateTime)item.CheckOut).ToString("dd-MMM-yyyy"))</td>
+                            <td> <span class="badge badge-primary px-2">@item.Status</span></td>
+                             <td><a href="/BookingAdmin/ApprovedReservation/@item.BookingId" class="btn btn-outline-primary">Approve!</a></td>
+                            <td><a href="#" class="btn btn-danger">Cancel</a></td>
+                            <td><a href="#" class="btn btn-warning">Hold On</a></td>
+                            <td><a href="#" class="btn btn-info">Update</a></td>
+                            <td><a href="#" class="btn btn-dark">Details</a></td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+   </div>
