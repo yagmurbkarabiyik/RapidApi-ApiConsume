@@ -11,10 +11,11 @@ namespace RapidApiConsume.Controllers
             if (!string.IsNullOrEmpty(cityId))
             {
                 var client = new HttpClient();
+                string requestUrl = $"https://booking-com.p.rapidapi.com/v2/hotels/search?order_by=popularity&adults_number=2&checkin_date=2023-09-27&filter_by_currency=EUR&dest_id={cityId}&locale=en-gb&checkout_date=2023-09-28&units=metric&room_number=1&dest_type=city&include_adjacency=true&children_number=2&page_number=0&children_ages=5%2C0&categories_filter_ids=class%3A%3A2%2Cclass%3A%3A4%2Cfree_cancellation%3A%3A1";
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri($"https://booking-com.p.rapidapi.com/v2/hotels/search?checkin_date=2023-03-24&checkout_date=2023-03-27&filter_by_currency=EUR&dest_id={cityId}&room_number=1&units=metric&dest_type=city&locale=en-gb&adults_number=2&order_by=popularity&page_number=0&children_number=2&include_adjacency=true&children_ages=5%2C0&categories_filter_ids=class%3A%3A2%2Cclass%3A%3A4%2Cfree_cancellation%3A%3A1"),
+                    RequestUri = new Uri(requestUrl),
 
                     Headers =
     {
@@ -30,6 +31,7 @@ namespace RapidApiConsume.Controllers
                     return View(values.results.ToList());
                 }
             }
+
             else
             {
                 var client = new HttpClient();
@@ -52,6 +54,5 @@ namespace RapidApiConsume.Controllers
                 }
             }
         }
-     }
- }
-  
+    }
+}

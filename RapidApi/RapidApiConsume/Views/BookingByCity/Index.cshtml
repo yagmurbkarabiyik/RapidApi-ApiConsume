@@ -8,10 +8,10 @@
     <br /><br />
     @using (Html.BeginForm("Index", "BookingByCity", FormMethod.Post))
     {
-        <label>Şehir ID Bilgisini Giriniz</label>
+        <label>Please enter city ID</label>
         <input type="text" class="form-control" name="cityId" />
         <br />
-        <button class="btn btn-primary">Şehir İçin Otelleri Listele</button>
+        <button class="btn btn-primary">List Hotel For City</button>
     }
 
     <br />
@@ -21,9 +21,9 @@
     <table class="table table-bordered">
         <tr>
             <th>#</th>
-            <th>Otel Adı</th>
-            <th>Otel Puanı</th>
-            <th>Otel Detaylar</th>
+            <th>Hotel Name</th>
+            <th>Hotel Scor</th>
+            <th>Hotel Details</th>
         </tr>
         @foreach (var item in Model)
         {
@@ -32,7 +32,7 @@
                 <th>@count</th>
                 <td>@item.name</td>
                 <td>@item.reviewScore</td>
-                <td><a href="#" class="btn btn-outline-dark">Detaylar</a></td>
+                <td><a href="#" class="btn btn-outline-dark">Details</a></td>
             </tr>
         }
     </table>
