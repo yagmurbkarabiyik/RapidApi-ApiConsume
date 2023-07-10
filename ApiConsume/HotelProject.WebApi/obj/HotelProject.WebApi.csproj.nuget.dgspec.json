@@ -467,6 +467,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj"
+              },
               "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.DtoLayer\\HotelProject.DtoLayer.csproj": {
                 "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.DtoLayer\\HotelProject.DtoLayer.csproj"
               },
@@ -493,6 +496,14 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.6.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -521,6 +532,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.14, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [

@@ -321,6 +321,46 @@ namespace HotelProjectDataAccessLayer.Migrations
                     b.ToTable("Rooms");
                 });
 
+            modelBuilder.Entity("HotelProjectEntityLayer.Concrete.SendMessage", b =>
+                {
+                    b.Property<int>("SendMessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SendMessageId"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ReceiverMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceiverName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SendMessageId");
+
+                    b.ToTable("SendMessages");
+                });
+
             modelBuilder.Entity("HotelProjectEntityLayer.Concrete.Service", b =>
                 {
                     b.Property<int>("ServiceId")

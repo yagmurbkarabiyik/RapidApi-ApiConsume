@@ -4,6 +4,90 @@
     "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\Frontend\\Hotelroject.WebUI\\Hotelroject.WebUI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj",
+        "projectName": "HotelProject.BusinessLayer",
+        "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\ygmr4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ygmr4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProjectDataAccessLayer\\HotelProjectDataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProjectDataAccessLayer\\HotelProjectDataAccessLayer.csproj"
+              },
+              "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProjectEntityLayer\\HotelProjectEntityLayer.csproj": {
+                "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProjectEntityLayer\\HotelProjectEntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.DtoLayer\\HotelProject.DtoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -287,6 +371,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.BusinessLayer\\HotelProject.BusinessLayer.csproj"
+              },
               "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.DtoLayer\\HotelProject.DtoLayer.csproj": {
                 "projectPath": "C:\\Users\\ygmr4\\source\\repos\\HotelUdemyApp\\ApiConsume\\HotelProject.DtoLayer\\HotelProject.DtoLayer.csproj"
               },
@@ -313,6 +400,14 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.6.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -341,6 +436,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.14, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
