@@ -11,6 +11,7 @@ namespace HotelProject.BusinessLayer.Abstract
 {
     public interface IContactService : IGenericDal<Contact>
     {
-        void TInsert(Contact contact);  
+        void TInsert(Contact contact);
+        public int TGetContactCount();
     }
 }

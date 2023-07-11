@@ -52,6 +52,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Db250YWN0XFNpZGVCYXJBZG1pbkNvbnRhY3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ygmr4/source/repos/HotelUdemyApp/Frontend/Hotelroject.WebUI/Views/AdminFile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GaWxlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ygmr4/source/repos/HotelUdemyApp/Frontend/Hotelroject.WebUI/Views/AdminImageFile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5JbWFnZUZpbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ygmr4/source/repos/HotelUdemyApp/Frontend/Hotelroject.WebUI/Views/AdminLayout/FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcRm9vdGVyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -126,6 +134,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ygmr4/source/repos/HotelUdemyApp/Frontend/Hotelroject.WebUI/Views/Default/_SubscribePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxfU3Vic2NyaWJlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ygmr4/source/repos/HotelUdemyApp/Frontend/Hotelroject.WebUI/Views/ErrorPage/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JQYWdlXEVycm9yNDA0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ygmr4/source/repos/HotelUdemyApp/Frontend/Hotelroject.WebUI/Views/Guest/AddGuest.cshtml]
