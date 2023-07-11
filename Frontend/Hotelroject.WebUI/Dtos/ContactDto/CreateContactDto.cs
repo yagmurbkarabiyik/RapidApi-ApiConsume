@@ -6,6 +6,7 @@
         public string Mail { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
+        public int MessageCategoryId { get; set; }
         public DateTime Date { get; set; }
     }
 }
