@@ -33,12 +33,22 @@ namespace HotelProject.BusinessLayer.Concrete
 			return _staffDal.GetList();
 		}
 
-		public void TInsert(Staff t)
+        public int TGetStaffCount()
+        {
+            return _staffDal.GetStaffCount();
+        }
+
+        public void TInsert(Staff t)
 		{
 			_staffDal.Insert(t);	
 		}
 
-		public void TUpdate(Staff t)
+        public List<Staff> TLastFourStaff()
+        {
+          return _staffDal.LastFourStaff();
+        }
+
+        public void TUpdate(Staff t)
 		{
 			_staffDal.Update(t);
 		}

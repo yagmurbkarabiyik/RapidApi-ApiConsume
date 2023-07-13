@@ -36,7 +36,7 @@ builder.Services.AddMvc(config =>
 builder.Services.ConfigureApplicationCookie(options =>
 {
 	options.Cookie.HttpOnly = true;
-	options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+	options.ExpireTimeSpan = TimeSpan.FromMinutes(20000);
 	options.LoginPath = "/Login/Index/";
 });
 

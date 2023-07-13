@@ -9,5 +9,7 @@ namespace HotelProjectDataAccessLayer.Abstract
 {
 	public interface IStaffDal : IGenericDal<Staff>
 	{
+		int GetStaffCount();
+		List<Staff> LastFourStaff();
 	}
 }

@@ -1,4 +1,5 @@
 ﻿
+using HotelProjectEntityLayer.Concrete;
 using System.ComponentModel.DataAnnotations;
 
 namespace Hotelroject.WebUI.Dtos.RegisterDto
@@ -18,6 +19,12 @@ namespace Hotelroject.WebUI.Dtos.RegisterDto
         public string Mail { get; set; }
 
         [Required(ErrorMessage = "Required field!")]
+        public string Country { get; set; }
+
+        [Required(ErrorMessage = "Required field!")]
+        public string Gender { get; set; }
+
+        [Required(ErrorMessage = "Required field!")]
         public string Password { get; set; }
 
 
@@ -26,6 +33,5 @@ namespace Hotelroject.WebUI.Dtos.RegisterDto
         public string ConfirmPassword { get; set; }
 
 
-
-	}
+    }
 }

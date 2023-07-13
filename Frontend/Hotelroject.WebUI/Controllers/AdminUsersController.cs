@@ -1,21 +1,45 @@
 ﻿using HotelProjectEntityLayer.Concrete;
+using Hotelroject.WebUI.Dtos.AppUserDto;
+using Hotelroject.WebUI.Dtos.RoomDto;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Hotelroject.WebUI.Controllers
 {
     public class AdminUsersController : Controller
     {
-        private readonly UserManager<AppUser> _userManager;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public AdminUsersController(UserManager<AppUser> userManager)
+        public AdminUsersController(IHttpClientFactory httpClientFactory)
         {
-            _userManager = userManager;
+            _httpClientFactory = httpClientFactory;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var values = _userManager.Users.ToList();
+            //var client = _httpClientFactory.CreateClient();
+            //var responseMessage = await client.GetAsync("http://localhost:5191/api/AppUser");
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            //    var values = JsonConvert.DeserializeObject<List<ResultAppUserDto>>(jsonData);
+            //    return View(values);
+            //}
+            return View();
+
+        }
+
+        public async Task<IActionResult> UserList()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("http://localhost:5191/api/AppUser");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultAppUserListDto>>(jsonData);
+                return View(values);
+            }
             return View();
         }
     }
