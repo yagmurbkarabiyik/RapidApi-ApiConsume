@@ -1,7 +1,10 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
 using HotelProjectEntityLayer.Concrete;
+using Hotelroject.WebUI.Dtos.GuestDto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace HotelProject.WebApi.Controllers
 {
@@ -52,25 +55,33 @@ namespace HotelProject.WebApi.Controllers
             return Ok(values);
         }
 
-        [HttpPut("aaa")]
-        public IActionResult aaa(Booking booking)
-        {
-            _bookingService.TBookingStatusChangeApproved(booking);
-            return Ok();
-        }
-
-        [HttpPut("bbb")]
-        public IActionResult bbb(int id)
-        {
-            _bookingService.TBookingStatusChangeApproved2(id);
-            return Ok();
-        }
-
         [HttpGet("LastFiveBooking")]
         public IActionResult LastFiveBooking()
         {
-            var values = _bookingService.TGetLastFiveBookings(); 
+            var values = _bookingService.TGetLastFiveBookings();
             return Ok(values);
+        }
+
+        [HttpGet("BookingApproved")]
+        public IActionResult BookingApproved(int id)
+        {
+            _bookingService.TBookingStatusChangeApproved3(id);
+            return Ok();
+        }
+
+        [HttpGet("BookingCancelled")]
+        public IActionResult BookingCancelled(int id)
+        {
+            _bookingService.TBookingStatusChangeCancelled(id);
+            return Ok();
+        }
+
+        [HttpGet("BookingWait")]
+        public IActionResult BookingWait(int id)
+        {
+            _bookingService.TBookingStatusChangeCancelled(id);
+            return Ok();
         }
     }
 }
+

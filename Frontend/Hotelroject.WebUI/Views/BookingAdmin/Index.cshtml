@@ -34,11 +34,11 @@
                             <td>@(((DateTime)item.CheckIn).ToString("dd-MMM-yyyy"))</td>
                             <td>@(((DateTime)item.CheckOut).ToString("dd-MMM-yyyy"))</td>
                             <td> <span class="badge badge-primary px-2">@item.Status</span></td>
-                             <td><a href="/BookingAdmin/ApprovedReservation/@item.BookingId" class="btn btn-outline-primary">Approve!</a></td>
-                            <td><a href="#" class="btn btn-danger">Cancel</a></td>
-                            <td><a href="#" class="btn btn-warning">Hold On</a></td>
-                            <td><a href="#" class="btn btn-info">Update</a></td>
-                            <td><a href="#" class="btn btn-dark">Details</a></td>
+                            <td><a href="/BookingAdmin/ApprovedReservation2/@item.BookingId" class="btn btn-outline-primary">Approve!</a></td>
+                            <td><a href="/BookingAdmin/CancelledReservation/@item.BookingId/" class="btn btn-danger">Cancel</a></td>
+                            <td><a href="/BookingAdmin/BookingWait/@item.BookingId/" class="btn btn-warning">Hold On</a></td>
+                            <td><a href="/BookingAdmin/UpdateBooking/@item.BookingId/" class="btn btn-info">Update</a></td>
+                            <td><a href="/BookingAdmin/UpdateBooking/@item.BookingId/" class="btn btn-dark">Details</a></td>
                         </tr>
                         }
                     </tbody>
