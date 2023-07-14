@@ -105,6 +105,7 @@ namespace HotelProjectDataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -115,6 +116,7 @@ namespace HotelProjectDataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Gender")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
@@ -164,7 +166,7 @@ namespace HotelProjectDataAccessLayer.Migrations
                     b.Property<string>("WorkDepartment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("WorkLocationId")
+                    b.Property<int>("WorkLocationId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -201,6 +203,14 @@ namespace HotelProjectDataAccessLayer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ChildCount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -632,7 +642,9 @@ namespace HotelProjectDataAccessLayer.Migrations
                 {
                     b.HasOne("HotelProjectEntityLayer.Concrete.WorkLocation", "WorkLocation")
                         .WithMany("AppUsers")
-                        .HasForeignKey("WorkLocationId");
+                        .HasForeignKey("WorkLocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("WorkLocation");
                 });
