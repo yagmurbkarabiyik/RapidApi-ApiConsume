@@ -266,7 +266,7 @@ namespace HotelProjectDataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MessageCategoryId")
+                    b.Property<int?>("MessageCategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -653,9 +653,7 @@ namespace HotelProjectDataAccessLayer.Migrations
                 {
                     b.HasOne("HotelProjectEntityLayer.Concrete.MessageCategory", "MessageCategory")
                         .WithMany("Contacts")
-                        .HasForeignKey("MessageCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MessageCategoryId");
 
                     b.Navigation("MessageCategory");
                 });

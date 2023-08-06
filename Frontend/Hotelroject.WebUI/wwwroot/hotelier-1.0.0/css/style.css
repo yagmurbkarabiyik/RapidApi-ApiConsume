@@ -84,6 +84,7 @@
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
+    width: 100%;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
